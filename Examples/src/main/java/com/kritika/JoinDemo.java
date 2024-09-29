@@ -8,6 +8,7 @@ public class JoinDemo extends Thread{
 
     public static void main(String[] args) throws InterruptedException {
 
+        long start = System.currentTimeMillis();
         System.out.println("Sum of first N Numbers");
         System.out.println("Enter a value");
         Scanner sc = new Scanner(System.in);
@@ -18,6 +19,8 @@ public class JoinDemo extends Thread{
         jd.join();
         System.out.println("Sum of "+ JoinDemo.n+ " Numbers is "+ JoinDemo.sum);
 
+        long end = System.currentTimeMillis();
+        System.out.println("Total time taken is "+ (end-start)/1000 + " seconds");
     }
 
     public void run(){
