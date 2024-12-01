@@ -10,6 +10,7 @@ public class SyncDemo {
         MyThread mt2 = new MyThread(displayMessage, "Kinesh", 20);
 
         mt.start();
+        
         mt2.start();
     }
 
